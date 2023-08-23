@@ -5,16 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class About extends Model
+class donation extends Model
 {
     use HasFactory;
+    protected $table = 'donations';
     protected $fillable = [
-        'name',
-        'position',
-        'social_media_address',
-        'image'
-    ];
-    protected $casts = [
-        'social_media_address' => 'array',
+        'donate_name',
+        'donate_email',
+        'donate_amount',
+        'cause_id'
     ];
 }
